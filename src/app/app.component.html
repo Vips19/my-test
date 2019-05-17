@@ -1,0 +1,19 @@
+<table border="2">
+    <tr>
+        <th>Album ID</th>
+        <th>Id</th>
+        <th>title</th>
+        <th>url</th>
+        <th>thumbnailurl</th>
+    </tr>
+    <tr *ngFor="let ph of photo">
+           <td>{{ ph.albumid }}</td>
+           <td>{{ ph.id }}</td>
+           <td>{{ ph.title }}</td>
+           <td>{{ ph.url }}</td>
+           <td>{{ ph.thumbnailurl }}</td>
+    </tr>
+   
+    
+</table>
+<router-outlet></router-outlet>
