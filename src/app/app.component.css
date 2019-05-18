@@ -2,3 +2,17 @@ table{
     width:100%;
 }
 
+th{
+    background-color: black;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.mat-header-cell{
+    text-align: center;
+}
+
+table{
+    border:1px solid grey;
+}

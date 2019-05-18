@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AppComponent implements OnInit {
   isLoading = true;
-  displayedColumns: string[] = ['albumId','id','title','url','thumbnailUrl'];
+  displayedColumns: string[] = ['AlbumId','Id','Title','Url','ThumbnailUrl'];
   photo :photo[];
 
   dataSource=new MatTableDataSource<photo>();
