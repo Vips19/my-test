@@ -66,4 +66,13 @@
     <tr mat-row *matRowDef="let row; columns :displayedColumns;"></tr>
     
 </table>
-<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+<mat-card *ngIf="isLoading" 
+   style="display: flex; justify-content: center; align-items: center; ">
+  <mat-progress-spinner 
+  class="spinner"
+  [diameter]="50"
+    color="primary" 
+    mode="indeterminate">
+  </mat-progress-spinner>
+</mat-card>
+<mat-paginator  [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

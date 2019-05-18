@@ -9,6 +9,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
