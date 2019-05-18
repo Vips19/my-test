@@ -9,10 +9,11 @@ th{
     font-weight: bold;
 
 }
-.mat-header-cell{
+th.mat-header-cell{
     text-align: center;
 }
 
-table{
-    border:1px solid grey;
+.table-container{
+    height:600px;
+    overflow-x:auto; 
 }
