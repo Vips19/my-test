@@ -5,6 +5,7 @@ import {HttpserviceService} from './httpservice.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import {finalize} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -28,20 +29,24 @@ export class AppComponent implements OnInit,AfterViewInit {
 
  
   ngOnInit() {
-    this.httpservice.getphoto().subscribe(
+    this.httpservice.getphoto().pipe(
+      finalize(()=>  (this.isLoading=false))
+    )
+    .subscribe(
       data=>{ this.dataSource.data=data;
-      this.isLoading=false;
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       }
       // response=>this.handleSuccessfulResponse(response)
     // response=>console.log(response)
     ),
     (console.error());
-    ;
-   
+    
   }
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    
+    
+   
   }
   
 }
